@@ -1,0 +1,22 @@
+<h1>Edit this task</h1>
+
+<!-- <form action="/task" method="patch">
+  <label for="name">Enter a name:</label>
+  <input type="text" id="name" name="restaurant[name]" value="Dishoom">
+  <label for="address">Enter a address:</label>
+  <input type="text" id="address" name="restaurant[address]" value="Test">
+  <label for="rating">Enter a rating:</label>
+  <input type="text" id="rating" name="restaurant[rating]" value="Test">
+  <input type="submit">
+</form>
+ -->
+
+<%= form_for @task do |f| %>
+  <%= f.label :name, 'Task Name: ' %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description, 'Task Description: ' %>
+  <%= f.text_field :description %>
+
+  <%= f.submit "Edit New Task" %>
+<% end %>
